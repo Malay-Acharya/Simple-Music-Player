@@ -6,7 +6,7 @@ export default function SongList({songs}) {
     <>
         {songs.map((song) =>{
             return(
-                <h3 key = {song.code}>{song.code}</h3>
+                <h3 key = {song.id}>{song.name}</h3>
             );
             
         })}

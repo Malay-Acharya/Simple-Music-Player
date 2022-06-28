@@ -7,25 +7,25 @@ export const Allsongdata = [
     },
     {
         id:'71351',
-        name: 'Zaalima',
+        name: 'Zaalima2',
         artist:'Arijit Singh', 
         image: "https://api.deezer.com/artist/3830821/image",
     },
     {
         id:'71352',
-        name: 'Zaalima',
+        name: 'Zaalima3',
         artist:'Arijit Singh', 
         image: "https://api.deezer.com/artist/3830821/image",
     },
     {
         id:'71353',
-        name: 'Zaalima',
+        name: 'Zaalima4',
         artist:'Arijit Singh', 
         image: "https://api.deezer.com/artist/3830821/image",
     },
     {
         id:'71354',
-        name: 'Zaalima',
+        name: 'Zaalima5',
         artist:'Arijit Singh', 
         image: "https://api.deezer.com/artist/3830821/image",
     }
