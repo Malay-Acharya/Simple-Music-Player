@@ -1,11 +1,10 @@
-const initialState = {name: "",artist:"",image:"", id:""};
+const initialState = {name: "",artist:"",image:"https://via.placeholder.com/150/ADFF2F/000000?text=Select+a+song", id:""};
 
 const changethesong = (state = initialState, action) => {
     console.log(action)
     switch (action.type) {
         case "CHANGESONG": 
         state = action.payload.song;
-
         console.log(state);
         Object.assign(state, state)
         return state;

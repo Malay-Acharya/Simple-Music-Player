@@ -1,0 +1,12 @@
+.song-list{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0;
+    gap: 2vh;
+}
+
+.song-list-item{
+    font-weight: lighter;
+    padding-left: 1vw;
+    cursor: pointer;
+}

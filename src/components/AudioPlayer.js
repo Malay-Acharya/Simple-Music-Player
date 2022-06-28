@@ -94,9 +94,7 @@ export default function AudioPlayer() {
             <input type="range" className='progress-bar' defaultValue="0" ref={progressBar} onChange={changeRange}></input>
         </div>
         <div className='play-icons'>
-            <button className='icons'><BsSkipBackwardFill/></button>
             <button className='icons' onClick={togglePlayPause}>{isPlaying ? <FaPause/> : <FaPlay/>}</button>
-            <button className='icons'><BsSkipForwardFill/></button>
         </div>
     </div>
   )

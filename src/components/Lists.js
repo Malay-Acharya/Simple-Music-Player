@@ -25,7 +25,7 @@ export default function Lists() {
         lists.map((list,index)=>{return (
             <div key = {index}>
                 <div onClick={() => {songfunction(list)}}>
-                <h2 className='list-item'>{list.name}</h2>
+                <h2 className='list-item'>{list.name} (Click on the song to play)</h2>
                 </div>
                 {list.name === cid?(<SongList songs = {song}/>):(<></>)}
             </div>
