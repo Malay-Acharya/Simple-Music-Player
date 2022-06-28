@@ -3,7 +3,7 @@ import { BsSkipForwardFill } from "react-icons/bs"
 import { BsSkipBackwardFill } from "react-icons/bs"
 import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
-import axios from 'axios'
+import { useSelector } from 'react-redux'
 import "./AudioPlayer.css"
 
 
@@ -16,7 +16,17 @@ export default function AudioPlayer() {
     const progressBar = useRef();
     const animationRef = useRef();
     const [id, changeid] = useState(1109737);
-    const [data, changeData] = useState({artist:{name:""}, album:{title:"", cover_medium:""}});
+    const [data, changedata] = useState({name: "",artist:"",image:"", id:""});
+
+    const d =  useSelector(state => state.changethesong)
+    useEffect(() => {
+      if(d.length !== 0){
+        console.log(d);
+        changedata(d);
+      }
+      
+    }, [d])
+    
 
     // useEffect(() => {
     //     const options = {
@@ -76,10 +86,10 @@ export default function AudioPlayer() {
     <div className='audio-player'>
         <audio ref={audioPlayer} src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3' preload="metadata"></audio>
         <div>
-            <img src={data.album.cover_medium} alt = "songcover"/>
+            <img src={data.image} alt = "songcover"/>
         </div>
-        <h2 className='song-name'>{data.album.title}</h2>
-        <h3 className='artist-name'>{data.artist.name}</h3>
+        <h2 className='song-name'>{data.name}</h2>
+        <h3 className='artist-name'>{data.artist}</h3>
         <div>
             <input type="range" className='progress-bar' defaultValue="0" ref={progressBar} onChange={changeRange}></input>
         </div>

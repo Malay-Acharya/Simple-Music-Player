@@ -10,7 +10,6 @@ export default function Lists() {
     const [song, setsongs] = useState([]);
     const [cid, setcid] = useState();
     const songfunction = (list) =>{
-        console.log(song.length)
         if(song.length === 0){
             setsongs(list.song)
             setcid(list.name);
@@ -24,8 +23,10 @@ export default function Lists() {
   return (
     <div className='lists'>{
         lists.map((list,index)=>{return (
-            <div key = {index} onClick={() => {songfunction(list)}}>
+            <div key = {index}>
+                <div onClick={() => {songfunction(list)}}>
                 <h2 className='list-item'>{list.name}</h2>
+                </div>
                 {list.name === cid?(<SongList songs = {song}/>):(<></>)}
             </div>
         )         
