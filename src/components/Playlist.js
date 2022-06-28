@@ -1,5 +1,6 @@
 import React from 'react'
 import Lists from './Lists'
+import MakePlaylist from './MakePlaylist'
 import './Playlist.css'
 
 export default function Playlist() {
@@ -10,6 +11,7 @@ export default function Playlist() {
         <button className='add-playlist'><h2>ADD</h2></button>
       </div>
       <Lists/>
+      <MakePlaylist/>
     </div>
   )
 }
