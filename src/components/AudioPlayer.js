@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { BsSkipForwardFill } from "react-icons/bs"
-import { BsSkipBackwardFill } from "react-icons/bs"
 import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
 import { useSelector } from 'react-redux'
@@ -15,7 +13,6 @@ export default function AudioPlayer() {
     const audioPlayer = useRef();
     const progressBar = useRef();
     const animationRef = useRef();
-    const [id, changeid] = useState(1109737);
     const [data, changedata] = useState({name: "",artist:"",image:"", id:""});
 
     const d =  useSelector(state => state.changethesong)
@@ -28,23 +25,6 @@ export default function AudioPlayer() {
     }, [d])
     
 
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: `https://deezerdevs-deezer.p.rapidapi.com/track/${id}`,
-    //         headers: {
-    //           'X-RapidAPI-Key': '2d8f5d7671msh2e3ae3aa508357ep1ee87djsnaa4dc93728dc',
-    //           'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-    //         }
-    //       };
-          
-    //       axios.request(options).then(function (response) {
-    //           changeData(response.data);
-    //           console.log(response.data)
-    //       }).catch(function (error) {
-    //           console.error(error);
-    //       });
-    // }, [id])
     
 
     useEffect(() => {
