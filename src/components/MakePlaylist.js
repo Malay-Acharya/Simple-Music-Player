@@ -4,7 +4,7 @@ import './makeplaylist.css'
 
 export default function MakePlaylist() {
 
-    const [currentsong, setcurrentsong] = useState("Select the song")
+    const [currentsong, setcurrentsong] = useState('Select the song')
 
   return (
     <div className='playlist-formpage'>

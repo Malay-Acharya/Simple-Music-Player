@@ -30,7 +30,9 @@
     background: #205C1A;
     filter: brightness(50%);
     border: none;
-    height: 5vh;
+    height: 6vh;
+    font-size: 1.3rem;
+    padding: 1%;
 }
 
 .play-option{
