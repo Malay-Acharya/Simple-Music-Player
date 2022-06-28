@@ -1,0 +1,51 @@
+.playlist-formpage{
+    margin: 3% 0;
+    border: 2px solid greenyellow;
+    padding: 5%;
+}
+
+.playlist-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.name-play{
+    height: 7vh;
+    font-size: 1.5rem;
+    background: #205C1A;
+    filter: brightness(50%);
+    border: none;
+    color: white;
+    padding: 1%;
+}
+
+::placeholder{
+    color: white;
+}
+
+.play-select{
+    width: 50%;
+    color: white;
+    background: #205C1A;
+    filter: brightness(50%);
+    border: none;
+    height: 5vh;
+}
+
+.play-option{
+    background: #205C1A;
+    filter: brightness(50%);
+}
+
+.play-submit{
+    color: black;
+    background-color: greenyellow;
+    width: 5vw;
+    height: 6vh;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
