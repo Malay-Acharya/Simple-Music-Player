@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import AudioPlayer from "./components/AudioPlayer";
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <AudioPlayer/>
     </div>
   );
 }
