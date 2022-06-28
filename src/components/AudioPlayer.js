@@ -3,6 +3,7 @@ import { BsSkipForwardFill } from "react-icons/bs"
 import { BsSkipBackwardFill } from "react-icons/bs"
 import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
+import axios from 'axios'
 import "./AudioPlayer.css"
 
 
@@ -14,6 +15,27 @@ export default function AudioPlayer() {
     const audioPlayer = useRef();
     const progressBar = useRef();
     const animationRef = useRef();
+    const [id, changeid] = useState(1109737);
+    const [data, changeData] = useState({artist:{name:""}, album:{title:"", cover_medium:""}});
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: `https://deezerdevs-deezer.p.rapidapi.com/track/${id}`,
+            headers: {
+              'X-RapidAPI-Key': '2d8f5d7671msh2e3ae3aa508357ep1ee87djsnaa4dc93728dc',
+              'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+          };
+          
+          axios.request(options).then(function (response) {
+              changeData(response.data);
+              console.log(response.data)
+          }).catch(function (error) {
+              console.error(error);
+          });
+    }, [id])
+    
 
     useEffect(() => {
         const seconds = Math.floor(audioPlayer.current.duration);
@@ -52,9 +74,12 @@ export default function AudioPlayer() {
 
   return (
     <div className='audio-player'>
-        <audio ref={audioPlayer} src="https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3" preload="metadata"></audio>
-        <h2 className='song-name'>SMELLS LIKE TEEN SPIRIT</h2>
-        <h3 className='artist-name'>NIRVANA</h3>
+        <audio ref={audioPlayer} src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3' preload="metadata"></audio>
+        <div>
+            <img src={data.album.cover_medium} alt = "songcover"/>
+        </div>
+        <h2 className='song-name'>{data.album.title}</h2>
+        <h3 className='artist-name'>{data.artist.name}</h3>
         <div>
             <input type="range" className='progress-bar' defaultValue="0" ref={progressBar} onChange={changeRange}></input>
         </div>
