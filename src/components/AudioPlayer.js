@@ -18,7 +18,6 @@ export default function AudioPlayer() {
     const d =  useSelector(state => state.changethesong)
     useEffect(() => {
       if(d.length !== 0){
-        console.log(d);
         changedata(d);
       }
       
@@ -64,7 +63,7 @@ export default function AudioPlayer() {
 
   return (
     <div className='audio-player'>
-        <audio ref={audioPlayer} src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3' preload="metadata"></audio>
+        <audio ref={audioPlayer} src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' preload="metadata"></audio>
         <div>
             <img src={data.image} alt = "songcover"/>
         </div>
