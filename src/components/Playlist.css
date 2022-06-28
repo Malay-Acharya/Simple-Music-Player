@@ -1,0 +1,18 @@
+.playlist{
+    color: white;
+    margin: 2%;
+    width: 55%;
+}
+
+.playlist-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-playlist{
+    background-color: greenyellow;
+    border: none;
+    font-weight: bolder;
+    padding: 1%;
+    border-radius:2px;
+}

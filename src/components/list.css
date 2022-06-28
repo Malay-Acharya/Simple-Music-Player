@@ -1,0 +1,17 @@
+.lists{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0;
+    gap: 2vh;
+}
+
+.list-item{
+    font-weight: lighter;
+    color: white;
+    width: 55vw;
+    border-radius: 4px;
+    padding: 2vh ;
+    background: #205C1A;
+    filter: brightness(50%);
+    opacity:;
+}
