@@ -18,23 +18,23 @@ export default function AudioPlayer() {
     const [id, changeid] = useState(1109737);
     const [data, changeData] = useState({artist:{name:""}, album:{title:"", cover_medium:""}});
 
-    useEffect(() => {
-        const options = {
-            method: 'GET',
-            url: `https://deezerdevs-deezer.p.rapidapi.com/track/${id}`,
-            headers: {
-              'X-RapidAPI-Key': '2d8f5d7671msh2e3ae3aa508357ep1ee87djsnaa4dc93728dc',
-              'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-            }
-          };
+    // useEffect(() => {
+    //     const options = {
+    //         method: 'GET',
+    //         url: `https://deezerdevs-deezer.p.rapidapi.com/track/${id}`,
+    //         headers: {
+    //           'X-RapidAPI-Key': '2d8f5d7671msh2e3ae3aa508357ep1ee87djsnaa4dc93728dc',
+    //           'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+    //         }
+    //       };
           
-          axios.request(options).then(function (response) {
-              changeData(response.data);
-              console.log(response.data)
-          }).catch(function (error) {
-              console.error(error);
-          });
-    }, [id])
+    //       axios.request(options).then(function (response) {
+    //           changeData(response.data);
+    //           console.log(response.data)
+    //       }).catch(function (error) {
+    //           console.error(error);
+    //       });
+    // }, [id])
     
 
     useEffect(() => {
